@@ -29,7 +29,7 @@ Um sistema independente para **Foundry Virtual Tabletop 13**, acompanhado por um
 4. Crie um Actor do tipo **hero** ou **npc**; a ficha **RENDEZVOUS — Gibi** será aberta por padrão.
 5. Na página **Poderes**, crie técnicas originais ou importe uma das 140 da biblioteca.
 
-**Instalação por manifesto:** após a publicação da release GitHub `v0.8.1`, um ZIP poderá ser disponibilizado em Releases e a instalação por manifesto `system.json` passará a funcionar. O pacote ainda não está publicado no repositório remoto.
+**Instalação por manifesto:** após a publicação da release GitHub `v0.8.1`, um ZIP poderá ser disponibilizado em Releases e a instalação por manifesto `system.json` passará a funcionar. O pacote só estará disponível por manifesto após ser publicado no repositório remoto.
 
 ## Demonstração no navegador
 
@@ -39,7 +39,7 @@ Use `docs/index.html` em um servidor HTTP estático:
 npm run serve
 ```
 
-Abra `http://localhost:8080/docs/`. O projeto não exige Node para ser servido, apenas um servidor HTTP simples. Como alternativa, abra o arquivo **RENDEZVOUS_Ficha_Demo_Offline.html** incluído no pacote de distribuição, sem servidor.
+Abra `http://localhost:8080/docs/`. O projeto não exige Node para ser servido, apenas um servidor HTTP simples. A demonstração é servida pelo diretório `docs/`; a versão HTML isolada das versões anteriores não integra esta release.
 
 Depois de publicar o repositório, habilite GitHub Pages em **Settings → Pages → Deploy from a branch → main → /docs**. O endereço esperado será `https://tulioscost.github.io/rendezvous-rpg/` (só funcionará após a publicação e ativação do Pages).
 
@@ -103,4 +103,4 @@ O usuário que executa o push precisa possuir permissão de gravação. Antes de
 
 ## Release
 
-Uma release local foi preparada em `release/rendezvous-rpg-v0.8.1.zip`, acompanhada das notas em `release/RELEASE_NOTES_v0.8.1.md`. Para publicar no GitHub, crie a tag `v0.8.1` e faça push; o workflow `.github/workflows/release.yml` enviará o ZIP automaticamente.
+A distribuição pública utiliza exatamente três ativos: `rendezvous-rpg-foundry.zip`, `system.json` e `RELEASE_v0.8.1.md`. O comando `bash scripts/package.sh` gera esses arquivos na pasta `release/`. O workflow publica os três após o push da tag `v0.8.1`.

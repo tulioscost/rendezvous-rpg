@@ -1,0 +1,1823 @@
+{
+  "title": "RENDEZVOUS — 140 Técnicas",
+  "version": "0.8.0",
+  "origin": "Catálogos de playtest 0.2, 0.4 e 0.7; custo de referência preservado.",
+  "techniques": [
+    {
+      "id": "RV-001",
+      "name": "Golpe de Titânio",
+      "effect": "dano",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Impacto corporal sobre um único alvo; 4 de dano bruto.",
+      "countermeasure": "Esquiva, cobertura corporal, RD."
+    },
+    {
+      "id": "RV-002",
+      "name": "Raio de Solis",
+      "effect": "dano",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Feixe de energia até três zonas; 6 de dano bruto.",
+      "countermeasure": "Cobertura real, isolamento do feixe, RD."
+    },
+    {
+      "id": "RV-003",
+      "name": "Corte de Fase",
+      "effect": "dano",
+      "grade": 3,
+      "modifiers": {
+        "perfurante": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Golpe de contato que ignora até 2 pontos de RD; 6 de dano bruto.",
+      "countermeasure": "Esquivar; evitar contato."
+    },
+    {
+      "id": "RV-004",
+      "name": "Onda de Choque",
+      "effect": "dano",
+      "grade": 2,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 8,
+      "description": "Impacto numa zona em contato; 4 de dano bruto, D +1 para dispersão.",
+      "countermeasure": "Sair da área, escudos estruturais."
+    },
+    {
+      "id": "RV-005",
+      "name": "Tempestade Fotônica",
+      "effect": "dano",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 20,
+      "description": "Explosão a até três zonas; 8 de dano, todos os alvos válidos e D +1.",
+      "countermeasure": "Cobertura, evacuação, distância."
+    },
+    {
+      "id": "RV-006",
+      "name": "Disparo de Precisão",
+      "effect": "dano",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": true,
+      "sourceVersion": "0.2",
+      "referenceCost": 8,
+      "description": "Raio de alta potência; exige uma ação anterior exclusiva de mira, perdendo-a se interrompido.",
+      "countermeasure": "Interromper a preparação ou buscar cobertura."
+    },
+    {
+      "id": "RV-007",
+      "name": "Pele de Pedra",
+      "effect": "protecao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Proteção pessoal contínua com RD 2.",
+      "countermeasure": "Ataques com perfuração; proteção não soma à armadura."
+    },
+    {
+      "id": "RV-008",
+      "name": "Escamas Solis",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Proteção pessoal contínua com RD 3.",
+      "countermeasure": "Fraqueza explícita ou perfuração."
+    },
+    {
+      "id": "RV-009",
+      "name": "Corpo Inquebrável",
+      "effect": "protecao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 8,
+      "description": "Proteção pessoal contínua com RD 4.",
+      "countermeasure": "Ataques de maior G; controle não é RD."
+    },
+    {
+      "id": "RV-010",
+      "name": "Blindagem Criogênica",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": true,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "RD 3 apenas sob exposição a gelo/frio relevante; proteção realmente restrita.",
+      "countermeasure": "Calor, impacto e outras fontes não cobertas."
+    },
+    {
+      "id": "RV-011",
+      "name": "Armadura Removível",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": true,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Armadura RD 3 com Durabilidade 6 e risco efetivo de bloqueio/confisco.",
+      "countermeasure": "Desarme, pane, manutenção e captura."
+    },
+    {
+      "id": "RV-012",
+      "name": "Carapaça de Resíduo",
+      "effect": "protecao",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Proteção lendária contínua RD 6.",
+      "countermeasure": "Controle/Influência não são ataques de dano."
+    },
+    {
+      "id": "RV-013",
+      "name": "Salto de Fachada",
+      "effect": "movimento",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 1,
+      "description": "Salto extraordinário de até 20 m por rodada, sujeito a apoio e obstáculos.",
+      "countermeasure": "Tetos, grades e ausência de apoios."
+    },
+    {
+      "id": "RV-014",
+      "name": "Corrida Elétrica",
+      "effect": "movimento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Corrida extraordinária de até 50 m por rodada.",
+      "countermeasure": "Obstáculos, pavimento e armadilhas."
+    },
+    {
+      "id": "RV-015",
+      "name": "Voo de Propulsão",
+      "effect": "movimento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Voo controlado até 150 m por rodada; sem ataque extra.",
+      "countermeasure": "Ambientes fechados e interferência na propulsão."
+    },
+    {
+      "id": "RV-016",
+      "name": "Passo de Sombras",
+      "effect": "movimento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Transposição de até 150 m apenas entre sombras vistas/conhecidas.",
+      "countermeasure": "Iluminação total ou bloqueios específicos."
+    },
+    {
+      "id": "RV-017",
+      "name": "Esquiva Vetorial",
+      "effect": "movimento",
+      "grade": 3,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Usa reação para deslocar-se conforme G, sem receber ação principal extra.",
+      "countermeasure": "Zona sem saída; uma reação por rodada."
+    },
+    {
+      "id": "RV-018",
+      "name": "Arrancada Supersônica",
+      "effect": "movimento",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Movimento lendário até 10 km/rodada quando o percurso é seguro.",
+      "countermeasure": "Riscos a civis; colisões; terrenos estreitos."
+    },
+    {
+      "id": "RV-019",
+      "name": "Teia de Contenção",
+      "effect": "controle",
+      "grade": 2,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Impõe Contido, alvo a até três zonas; resistência física D2.",
+      "countermeasure": "Quebrar a teia, soltar-se, escapar do alcance."
+    },
+    {
+      "id": "RV-020",
+      "name": "Mão Telecinética",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Imobiliza alvo ou limita seu movimento; não levanta toneladas sem efeito próprio.",
+      "countermeasure": "Abrigo ou resistência apropriada D2."
+    },
+    {
+      "id": "RV-021",
+      "name": "Torpor Elétrico",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Impõe Atordoado por acerto + resistência D2; não causa Dano automático.",
+      "countermeasure": "Isolamento; interromper fonte elétrica."
+    },
+    {
+      "id": "RV-022",
+      "name": "Maré de Estase",
+      "effect": "controle",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 20,
+      "description": "Controle de área que tenta Contido em uma zona a distância; ataque D +1.",
+      "countermeasure": "Dividir o grupo e escapar das zonas."
+    },
+    {
+      "id": "RV-023",
+      "name": "Garra de Urso",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Contenção corporal reforçada, resistência D2; apenas um alvo.",
+      "countermeasure": "Retirada, distância, mobilidade."
+    },
+    {
+      "id": "RV-024",
+      "name": "Grilhão de Gravidade",
+      "effect": "controle",
+      "grade": 5,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 15,
+      "description": "Contenção gravitacional extraordinária, resistência D3.",
+      "countermeasure": "Anular campo ou quebrar concentração."
+    },
+    {
+      "id": "RV-025",
+      "name": "Parede de Gelo",
+      "effect": "criacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Ergue barreira RD 2, Integridade 4, em contato.",
+      "countermeasure": "Calor, contornar, romper estrutura."
+    },
+    {
+      "id": "RV-026",
+      "name": "Escudo de Entulho",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Ergue barreira de reação RD 3, Integridade 6; consome reação.",
+      "countermeasure": "Ataque de outro ângulo; destruir barreira."
+    },
+    {
+      "id": "RV-027",
+      "name": "Ponte de Luz",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Cria passagem transitória adequada à escala de G e terreno.",
+      "countermeasure": "Quebra de concentração e sobrecarga estrutural."
+    },
+    {
+      "id": "RV-028",
+      "name": "Cápsula de Resgate",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Cria cápsula/barreira a até três zonas, RD 3 e Integridade 6.",
+      "countermeasure": "Força concentrada ou contornar."
+    },
+    {
+      "id": "RV-029",
+      "name": "Labirinto de Cristal",
+      "effect": "criacao",
+      "grade": 4,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 16,
+      "description": "Cria obstáculos por uma zona em contato; não ataca automaticamente.",
+      "countermeasure": "Ruptura das paredes e rotas alternativas."
+    },
+    {
+      "id": "RV-030",
+      "name": "Cúpula de Emergência",
+      "effect": "criacao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true,
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 24,
+      "description": "Barreira de reação de RD 4 e Integridade 8, projetada a distância, cobrindo uma zona.",
+      "countermeasure": "Custo elevado, 1 reação e integridade finita."
+    },
+    {
+      "id": "RV-031",
+      "name": "Corpo Elástico",
+      "effect": "alteracao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Altera elasticidade corporal para passar por frestas/absorver impacto narrativo; não concede RD.",
+      "countermeasure": "Frio intenso; objetos cortantes."
+    },
+    {
+      "id": "RV-032",
+      "name": "Braços de Pedra",
+      "effect": "alteracao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Muda matéria de braços para sustentar esforços proporcionais ao G; Dano separado.",
+      "countermeasure": "Quebra de foco e materiais incompatíveis."
+    },
+    {
+      "id": "RV-033",
+      "name": "Metamorfose Feral",
+      "effect": "alteracao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Transformação corporal e adaptação fisiológica, sem RD/Dano gratuitos.",
+      "countermeasure": "Condições que impeçam transformação."
+    },
+    {
+      "id": "RV-034",
+      "name": "Fase Líquida",
+      "effect": "alteracao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Altera o estado corporal para atravessar frestas compatíveis; não atravessa qualquer barreira.",
+      "countermeasure": "Vedação hermética, campos compatíveis."
+    },
+    {
+      "id": "RV-035",
+      "name": "Densidade Dirigida",
+      "effect": "alteracao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Ajusta uma propriedade corporal, como densidade ou flutuação, sem voo ou RD automáticos.",
+      "countermeasure": "Instabilidade da transformação e limites ambientais."
+    },
+    {
+      "id": "RV-036",
+      "name": "Transmutação de Resgate",
+      "effect": "alteracao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 16,
+      "description": "Altera propriedade específica de objeto visível a até três zonas, sem valor permanente.",
+      "countermeasure": "Materiais incompatíveis e janela de efeito."
+    },
+    {
+      "id": "RV-037",
+      "name": "Visão Térmica",
+      "effect": "sensoriamento",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 1,
+      "description": "Percebe contraste térmico evidente ao alcance visual plausível.",
+      "countermeasure": "Isolamento térmico e obstáculos."
+    },
+    {
+      "id": "RV-038",
+      "name": "Eco Local",
+      "effect": "sensoriamento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Localiza objetos/pessoas por vibração numa zona.",
+      "countermeasure": "Amortecimento e ruído."
+    },
+    {
+      "id": "RV-039",
+      "name": "Olhos Solis",
+      "effect": "sensoriamento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Distingue assinaturas de energia Solis em uma zona.",
+      "countermeasure": "Blindagem ou ausência de resíduo."
+    },
+    {
+      "id": "RV-040",
+      "name": "Leitura Magnética",
+      "effect": "sensoriamento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Distingue circuitos e campos eletromagnéticos locais.",
+      "countermeasure": "Gaiola de Faraday e fontes concorrentes."
+    },
+    {
+      "id": "RV-041",
+      "name": "Horizonte Espectral",
+      "effect": "sensoriamento",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Rastreia sinais de um espectro a grandes distâncias, sujeitos a obstrução.",
+      "countermeasure": "Falsos positivos, blindagem e poluição."
+    },
+    {
+      "id": "RV-042",
+      "name": "Consciência Planetária",
+      "effect": "sensoriamento",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Detecta padrões extraordinários específicos, mas não localização onisciente.",
+      "countermeasure": "Falhas de cobertura, custo de interpretação."
+    },
+    {
+      "id": "RV-043",
+      "name": "Estancar",
+      "effect": "restauracao",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Restaura 1 PV durante conflito ou 2 PV em segurança ao mesmo alvo por cena.",
+      "countermeasure": "Contato e limite de frequência."
+    },
+    {
+      "id": "RV-044",
+      "name": "Água Revitalizante",
+      "effect": "restauracao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Cura 2 PV em cena/4 fora, contato e uma vez por alvo/cena.",
+      "countermeasure": "Falta de água pertinente e reexposição."
+    },
+    {
+      "id": "RV-045",
+      "name": "Nanorreparo",
+      "effect": "restauracao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Restaura até 3 PV em cena/6 fora sob aplicação de nanites.",
+      "countermeasure": "Interferência tecnológica e limite de usos."
+    },
+    {
+      "id": "RV-046",
+      "name": "Raio Restaurador",
+      "effect": "restauracao",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Cura até 3 PV durante cena a até três zonas.",
+      "countermeasure": "Cobertura e falta de linha de efeito."
+    },
+    {
+      "id": "RV-047",
+      "name": "Onda de Alívio",
+      "effect": "restauracao",
+      "grade": 3,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Cura até 3 PV em uma zona tocada; apenas uma vez por alvo/cena.",
+      "countermeasure": "Risco de beneficiar oponentes; D+1 se resistido."
+    },
+    {
+      "id": "RV-048",
+      "name": "Reconstrução Vital",
+      "effect": "restauracao",
+      "grade": 5,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 10,
+      "description": "Restaura até 5 PV em combate ou 10 PV em cena segura; não ressuscita.",
+      "countermeasure": "Exige contato; cicatrizes não desaparecem."
+    },
+    {
+      "id": "RV-049",
+      "name": "Sussurro Empático",
+      "effect": "influencia",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Induz emoção momentânea limitada; resistência VON D1.",
+      "countermeasure": "Autocontrole e incoerência com valores."
+    },
+    {
+      "id": "RV-050",
+      "name": "Miragem de Proximidade",
+      "effect": "influencia",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Cria ilusão sensorial para um alvo ao toque; resistência D2.",
+      "countermeasure": "Outros sentidos e provas externas."
+    },
+    {
+      "id": "RV-051",
+      "name": "Voz Hipnótica",
+      "effect": "influencia",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Sugestão breve resistível a até três zonas, sem submissão total.",
+      "countermeasure": "Ruído, barreiras e resistência D2."
+    },
+    {
+      "id": "RV-052",
+      "name": "Cortina de Pavor",
+      "effect": "influencia",
+      "grade": 3,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Ilusão amedrontadora em uma zona contígua; ataque em área D +1.",
+      "countermeasure": "Coragem e contraprovas."
+    },
+    {
+      "id": "RV-053",
+      "name": "Sonho Dirigido",
+      "effect": "influencia",
+      "grade": 4,
+      "modifiers": {
+        "sustentado": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Sustenta ilusão em contato na cena, com nova resistência por turno.",
+      "countermeasure": "Quebra de concentração; verificação cruzada."
+    },
+    {
+      "id": "RV-054",
+      "name": "Ordens Fragmentadas",
+      "effect": "influencia",
+      "grade": 5,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 15,
+      "description": "Sugestão complexa, breve e resistível; não dá comando suicida.",
+      "countermeasure": "Vontade treinada e instruções impossíveis."
+    },
+    {
+      "id": "RV-055",
+      "name": "Drone-Observador",
+      "effect": "invocacao",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 3,
+      "description": "Um auxiliar PV 2 com 4d6; observar exige comando como ação.",
+      "countermeasure": "Destruição, bloqueio de sinal e PV mínimos."
+    },
+    {
+      "id": "RV-056",
+      "name": "Autômato de Oficina",
+      "effect": "invocacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Um auxiliar PV 4 com 5d6 para função técnica definida.",
+      "countermeasure": "Desligamento e impedimento de acesso."
+    },
+    {
+      "id": "RV-057",
+      "name": "Corvo Umbroso",
+      "effect": "invocacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Um auxiliar PV 4 com 5d6 para investigação visual.",
+      "countermeasure": "Luz, dissipação e alcance do comando."
+    },
+    {
+      "id": "RV-058",
+      "name": "Duplo de Luz",
+      "effect": "invocacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Um auxiliar PV 6 com 6d6; não reproduz poderes não comprados.",
+      "countermeasure": "Reduzida resistência e comandar custa ação."
+    },
+    {
+      "id": "RV-059",
+      "name": "Sentinela Mecânica",
+      "effect": "invocacao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Um auxiliar PV 8 com 7d6 para assistência definida.",
+      "countermeasure": "Sabotagem, energia e controle remoto."
+    },
+    {
+      "id": "RV-060",
+      "name": "Avatar Solar",
+      "effect": "invocacao",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 18,
+      "description": "Um auxiliar PV 12 com 8d6, limitado a um corpo e ação comandada.",
+      "countermeasure": "Fonte energética e vulnerabilidade específica."
+    },
+    {
+      "id": "RV-061",
+      "name": "Pegada do Titã",
+      "effect": "ampliacao",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Levanta e arrasta até 250 kg; sem bônus ao dano automaticamente.",
+      "countermeasure": "Falta de apoio e alavancas."
+    },
+    {
+      "id": "RV-062",
+      "name": "Força de Guindaste",
+      "effect": "ampliacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Levanta até 1 t e ganha +1d6 em esforços físicos pertinentes.",
+      "countermeasure": "Estruturas frágeis e sobrecarga."
+    },
+    {
+      "id": "RV-063",
+      "name": "Mãos de Basalto",
+      "effect": "ampliacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Ergue até 5 t e ganha +2d6 em feitos físicos pertinentes.",
+      "countermeasure": "Peso distribuído; superfície de apoio."
+    },
+    {
+      "id": "RV-064",
+      "name": "Braços Sísmicos",
+      "effect": "ampliacao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 8,
+      "description": "Ergue até 25 t; dano exige efeito separado.",
+      "countermeasure": "Apoio e integridade do objeto."
+    },
+    {
+      "id": "RV-065",
+      "name": "Colosso",
+      "effect": "ampliacao",
+      "grade": 5,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 10,
+      "description": "Ergue até 125 t, dentro dos limites de postura e estrutura.",
+      "countermeasure": "Contra-peso e ameaças não físicas."
+    },
+    {
+      "id": "RV-066",
+      "name": "Levantador de Continentes",
+      "effect": "ampliacao",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Ergue até 625 t; nome é hipérbole, não permite deslocar continente.",
+      "countermeasure": "Distribuição de carga e limites ambientais."
+    },
+    {
+      "id": "RV-067",
+      "name": "Bateria Solar",
+      "effect": "absorcao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Reduz em até 2 o dano solar pertinente e carrega até 3 unidades.",
+      "countermeasure": "Ataques não solares."
+    },
+    {
+      "id": "RV-068",
+      "name": "Conversor Elétrico",
+      "effect": "absorcao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Reduz em até 3 o dano elétrico recebido e acumula cargas.",
+      "countermeasure": "Aterramento ou fontes não elétricas."
+    },
+    {
+      "id": "RV-069",
+      "name": "Sifão Térmico",
+      "effect": "absorcao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Reduz em até 3 o calor nocivo, sem proteção contra impactos.",
+      "countermeasure": "Ataques cinéticos e resfriamento."
+    },
+    {
+      "id": "RV-070",
+      "name": "Captação Cinética",
+      "effect": "absorcao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 8,
+      "description": "Reduz em até 4 impacto físico direto, descritor cinético.",
+      "countermeasure": "Ataques não cinéticos e controle mental."
+    },
+    {
+      "id": "RV-071",
+      "name": "Reservatório Luminoso",
+      "effect": "absorcao",
+      "grade": 4,
+      "modifiers": {},
+      "limitation": true,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Absorve luz intensa apenas se houve preparação para exposição prevista.",
+      "countermeasure": "Apagar luz, interromper preparação."
+    },
+    {
+      "id": "RV-072",
+      "name": "Núcleo Solar",
+      "effect": "absorcao",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Reduz até 6 pontos de radiação solar; converte cargas com limite +2 dano.",
+      "countermeasure": "Falta de luz pertinente, energia não absorvível."
+    },
+    {
+      "id": "RV-073",
+      "name": "Sombra de Esquina",
+      "effect": "ocultacao",
+      "grade": 1,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 2,
+      "description": "Oculta contra visão comum, mantendo atividade discreta.",
+      "countermeasure": "Sonar, iluminação forte e ações ostensivas."
+    },
+    {
+      "id": "RV-074",
+      "name": "Passos Silenciosos",
+      "effect": "ocultacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 4,
+      "description": "Oculta som de movimentação própria, não luz nem cheiro.",
+      "countermeasure": "Percepção visual ou térmica."
+    },
+    {
+      "id": "RV-075",
+      "name": "Camuflagem Fotônica",
+      "effect": "ocultacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Oculta contra visão comum com resistência conforme G.",
+      "countermeasure": "Visão não óptica e ações ofensivas."
+    },
+    {
+      "id": "RV-076",
+      "name": "Manto de Equipe",
+      "effect": "ocultacao",
+      "grade": 3,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Oculta visualmente uma zona de contato; inclui ocupantes.",
+      "countermeasure": "Sensores não visuais e dispersão."
+    },
+    {
+      "id": "RV-077",
+      "name": "Vulto Projetado",
+      "effect": "ocultacao",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Oculta visualmente um alvo a até três zonas, sem ficar invisível também.",
+      "countermeasure": "Detectores de som e movimento."
+    },
+    {
+      "id": "RV-078",
+      "name": "Zona de Silêncio",
+      "effect": "ocultacao",
+      "grade": 4,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 16,
+      "description": "Abafa som em uma zona de contato sem anular ondas fisicamente impossíveis.",
+      "countermeasure": "Visão, vibração e contra-sensores."
+    },
+    {
+      "id": "RV-079",
+      "name": "Curto Local",
+      "effect": "neutralizacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 6,
+      "description": "Suprime um circuito tocado, em resistência apropriada D2.",
+      "countermeasure": "Desconectar ou redundância analógica."
+    },
+    {
+      "id": "RV-080",
+      "name": "Pulso Antitecnologia",
+      "effect": "neutralizacao",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 12,
+      "description": "Suprime um aparelho selecionado a até três zonas por até um turno.",
+      "countermeasure": "Blindagem e redundância."
+    },
+    {
+      "id": "RV-081",
+      "name": "Extintor Solis",
+      "effect": "neutralizacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 9,
+      "description": "Cancela uma manifestação térmica Solis tocada, resistência D2.",
+      "countermeasure": "Múltiplas fontes ou energia não térmica."
+    },
+    {
+      "id": "RV-082",
+      "name": "Contrassinal Neural",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 16,
+      "description": "Como reação, tenta suprimir uma influência psíquica identificada e direcionada.",
+      "countermeasure": "Fontes diversas e resistência própria."
+    },
+    {
+      "id": "RV-083",
+      "name": "Gaiola de Interferência",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 16,
+      "description": "Suprime um dispositivo Solis por um turno, em alcance três zonas.",
+      "countermeasure": "Troca de equipamento e redundância."
+    },
+    {
+      "id": "RV-084",
+      "name": "Ponto Nulo",
+      "effect": "neutralizacao",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.2",
+      "referenceCost": 24,
+      "description": "Suprime uma manifestação de categoria limitada por um turno, D4.",
+      "countermeasure": "Outros efeitos independentes e contra-ondas."
+    },
+    {
+      "id": "RV4-01",
+      "name": "Prisão Invisível",
+      "effect": "controle",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 12,
+      "description": "Contido; alcance até três zonas; exige resistência e Pressão se resistido",
+      "countermeasure": "Ação para romper, cobertura e técnicas de Neutralização."
+    },
+    {
+      "id": "RV4-02",
+      "name": "Dobra Temporal",
+      "effect": "controle",
+      "grade": 5,
+      "modifiers": {
+        "distancia": true,
+        "sustentado": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 20,
+      "description": "Lento ou Atordoado, escolhido na compra; sustentação não gera novos testes",
+      "countermeasure": "Resistência, dispersão e ataque ao emissor."
+    },
+    {
+      "id": "RV4-03",
+      "name": "Maré de Estase",
+      "effect": "controle",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 20,
+      "description": "Aplica Controle G4 a uma zona com dispersão D+1",
+      "countermeasure": "Ficar fora da zona ou resistir."
+    },
+    {
+      "id": "RV4-04",
+      "name": "Jaula de Contenção Seletiva",
+      "effect": "controle",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true,
+        "seletivo": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 24,
+      "description": "Seleciona alvos numa zona, sem afetar aliados especificados",
+      "countermeasure": "Cobertura, resistência e fuga."
+    },
+    {
+      "id": "RV4-05",
+      "name": "Âncora Gravitacional",
+      "effect": "controle",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 18,
+      "description": "Atordoado ou Contido; nunca incapacita por um único acerto",
+      "countermeasure": "Contramedidas gravitacionais e duas resistências sucessivas."
+    },
+    {
+      "id": "RV4-06",
+      "name": "Vórtice Imobilizante",
+      "effect": "controle",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 30,
+      "description": "Controle lendário numa zona; custo alto",
+      "countermeasure": "Dispersar alvos; sucesso no teste de resistência."
+    },
+    {
+      "id": "RV4-07",
+      "name": "Desacoplador Solis",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 16,
+      "description": "Suprime um efeito identificado de categoria Solis até próximo turno",
+      "countermeasure": "Efeito independente, ocultar a fonte ou resistir."
+    },
+    {
+      "id": "RV4-08",
+      "name": "Interdição Eletromagnética",
+      "effect": "neutralizacao",
+      "grade": 5,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 20,
+      "description": "Suprime um efeito tecnológico de grau até 5",
+      "countermeasure": "Métodos redundantes, blindagem e uso de outra fonte."
+    },
+    {
+      "id": "RV4-09",
+      "name": "Ponto Nulo",
+      "effect": "neutralizacao",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 24,
+      "description": "Suprime temporariamente um efeito identificado até G6",
+      "countermeasure": "Separar modos de poder e investir em resistência."
+    },
+    {
+      "id": "RV4-10",
+      "name": "Antirressonância Reativa",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 16,
+      "description": "Cancela efeito específico percebido, após testes e reação",
+      "countermeasure": "Ataques inesperados, outro descritor, segunda ameaça."
+    },
+    {
+      "id": "RV4-11",
+      "name": "Contrafrequência Heroica",
+      "effect": "neutralizacao",
+      "grade": 5,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 20,
+      "description": "Ativação defensiva contra uma emissão compatível",
+      "countermeasure": "Efeito não identificado e perda da reação."
+    },
+    {
+      "id": "RV4-12",
+      "name": "Bloqueador Removível",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": true,
+      "sourceVersion": "0.4",
+      "referenceCost": 12,
+      "description": "Dispositivo sujeito a perda e durabilidade; reduz custo",
+      "countermeasure": "Desarmar ou destruir equipamento."
+    },
+    {
+      "id": "RV4-13",
+      "name": "Tempestade Fotônica",
+      "effect": "dano",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 20,
+      "description": "8 PV bruto contra múltiplos alvos na mesma zona; D+1",
+      "countermeasure": "Cobertura, espalhar equipe, RD."
+    },
+    {
+      "id": "RV4-14",
+      "name": "Explosão Seletiva",
+      "effect": "dano",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true,
+        "area": true,
+        "seletivo": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 24,
+      "description": "8 PV bruto em zona com alvos excluídos",
+      "countermeasure": "Espalhar alvos por zonas; RD."
+    },
+    {
+      "id": "RV4-15",
+      "name": "Coroa Solar",
+      "effect": "dano",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 30,
+      "description": "12 PV bruto em uma zona; exige campanha lendária",
+      "countermeasure": "Evitar agrupamento, defesa e proteção."
+    },
+    {
+      "id": "RV4-16",
+      "name": "Arrancada Supersônica",
+      "effect": "movimento",
+      "grade": 6,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 6,
+      "description": "10 km/rodada em percurso seguro; nenhuma ação extra",
+      "countermeasure": "Confinamento, obstáculos, objetivos simultâneos."
+    },
+    {
+      "id": "RV4-17",
+      "name": "Salto de Salvação",
+      "effect": "movimento",
+      "grade": 5,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 10,
+      "description": "Movimento defensivo na reação, uma ameaça concreta",
+      "countermeasure": "Ataque subsequente ou zona bloqueada."
+    },
+    {
+      "id": "RV4-18",
+      "name": "Intercepção Relâmpago",
+      "effect": "movimento",
+      "grade": 6,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 12,
+      "description": "Reação de reposicionamento compatível com G6; sem ataque bônus",
+      "countermeasure": "Distração, ataques sucessivos e linha de efeito."
+    },
+    {
+      "id": "RV4-19",
+      "name": "Muralha de Fase",
+      "effect": "criacao",
+      "grade": 5,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 15,
+      "description": "Barreira reativa RD5 em um evento; não soma à RD",
+      "countermeasure": "Ataques subsequentes ou Neutralização apropriada."
+    },
+    {
+      "id": "RV4-20",
+      "name": "Cortina de Contenção",
+      "effect": "criacao",
+      "grade": 6,
+      "modifiers": {
+        "distancia": true,
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.4",
+      "referenceCost": 30,
+      "description": "Barreira extensa em uma zona, uma estrutura ativa",
+      "countermeasure": "Contornar estrutura ou superar integridade."
+    },
+    {
+      "id": "RV7-LUM-01",
+      "name": "Lâmina de Aurora",
+      "effect": "dano",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "feixe refratado de dano 6",
+      "countermeasure": "cobertura opaca"
+    },
+    {
+      "id": "RV7-LUM-02",
+      "name": "Contorno de Halos",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "atordoa com contraste luminoso se a resistência falhar",
+      "countermeasure": "visor polarizado"
+    },
+    {
+      "id": "RV7-LUM-03",
+      "name": "Farol Interior",
+      "effect": "sensoriamento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "observa assinaturas espectrais",
+      "countermeasure": "blindagem"
+    },
+    {
+      "id": "RV7-LUM-04",
+      "name": "Véu de Espectro",
+      "effect": "ocultacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 4,
+      "description": "obscurece assinatura óptica pessoal",
+      "countermeasure": "radar alternativo"
+    },
+    {
+      "id": "RV7-LUM-05",
+      "name": "Sentinela de Facho",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "escudo fotônico RD3/Integridade6",
+      "countermeasure": "romper ou contornar"
+    },
+    {
+      "id": "RV7-LUM-06",
+      "name": "Ponto de Saturação",
+      "effect": "neutralizacao",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 16,
+      "description": "interfere em uma emissão lumínica identificada",
+      "countermeasure": "fonte não-luminosa"
+    },
+    {
+      "id": "RV7-BIO-01",
+      "name": "Espora Elástica",
+      "effect": "controle",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 4,
+      "description": "aprisiona com material elástico produzido ao toque",
+      "countermeasure": "romper aderência"
+    },
+    {
+      "id": "RV7-BIO-02",
+      "name": "Carapaça de Fibra",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "RD3 com fibras orgânicas",
+      "countermeasure": "corte penetrante"
+    },
+    {
+      "id": "RV7-BIO-03",
+      "name": "Salto Tendíneo",
+      "effect": "movimento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 3,
+      "description": "salto por tendões reforçados",
+      "countermeasure": "espaço fechado"
+    },
+    {
+      "id": "RV7-BIO-04",
+      "name": "Pulso Reparador",
+      "effect": "restauracao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 4,
+      "description": "recupera 2 PV por alvo na cena",
+      "countermeasure": "limite de uma vez"
+    },
+    {
+      "id": "RV7-BIO-05",
+      "name": "Pele de Camaleão",
+      "effect": "ocultacao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 4,
+      "description": "disfarce corporal ou textura",
+      "countermeasure": "senso especializado"
+    },
+    {
+      "id": "RV7-BIO-06",
+      "name": "Trava Orgânica",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": true,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "estrutura orgânica a distância exige preparo",
+      "countermeasure": "interromper preparo"
+    },
+    {
+      "id": "RV7-ECO-01",
+      "name": "Muralha Harmônica",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "escudo de campo acústico RD3",
+      "countermeasure": "silenciamento do emissor"
+    },
+    {
+      "id": "RV7-ECO-02",
+      "name": "Canto de Eco",
+      "effect": "influencia",
+      "grade": 2,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "induz falsa origem de ruído com resistência",
+      "countermeasure": "isolamento auditivo"
+    },
+    {
+      "id": "RV7-ECO-03",
+      "name": "Ressonância Tátil",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "desorientação vibratória em contato",
+      "countermeasure": "isolamento de vibração"
+    },
+    {
+      "id": "RV7-ECO-04",
+      "name": "Silêncio Estático",
+      "effect": "ocultacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "abafa assinatura acústica pessoal",
+      "countermeasure": "rastreio térmico"
+    },
+    {
+      "id": "RV7-ECO-05",
+      "name": "Onda de Desvio",
+      "effect": "movimento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "desvio de deslocamento com pulsações",
+      "countermeasure": "meio sem ressonância"
+    },
+    {
+      "id": "RV7-ECO-06",
+      "name": "Radar Vibrátil",
+      "effect": "sensoriamento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 3,
+      "description": "eco-localização treinada",
+      "countermeasure": "material absorvente"
+    },
+    {
+      "id": "RV7-GRV-01",
+      "name": "Lacre de Inércia",
+      "effect": "controle",
+      "grade": 4,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 12,
+      "description": "trava inercial com resistência apropriada",
+      "countermeasure": "resistência e campo oposto"
+    },
+    {
+      "id": "RV7-GRV-02",
+      "name": "Pele de Contrapeso",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "RD3 com redirecionamento de impacto",
+      "countermeasure": "manobra de flanco"
+    },
+    {
+      "id": "RV7-GRV-03",
+      "name": "Passo Orbital",
+      "effect": "movimento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 3,
+      "description": "movimento em arcos por campos locais",
+      "countermeasure": "barreira ou campo instável"
+    },
+    {
+      "id": "RV7-GRV-04",
+      "name": "Âncora dos Cascos",
+      "effect": "controle",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "imobilização em contato",
+      "countermeasure": "resistência física"
+    },
+    {
+      "id": "RV7-GRV-05",
+      "name": "Sonda de Massa",
+      "effect": "sensoriamento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "detectar grandes distribuições de massa",
+      "countermeasure": "ruído de campo"
+    },
+    {
+      "id": "RV7-GRV-06",
+      "name": "Curva de Impulso",
+      "effect": "dano",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "projetar impulso direcional de dano 6",
+      "countermeasure": "cobertura"
+    },
+    {
+      "id": "RV7-MAT-01",
+      "name": "Escarpa Vítrea",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "obstáculo vítreo de RD3 e integridade 6",
+      "countermeasure": "dano estrutural"
+    },
+    {
+      "id": "RV7-MAT-02",
+      "name": "Manto de Cacos",
+      "effect": "protecao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "RD3 em manta mineral",
+      "countermeasure": "perfurante"
+    },
+    {
+      "id": "RV7-MAT-03",
+      "name": "Modelagem Fractal",
+      "effect": "alteracao",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "ajusta textura de material por uma cena",
+      "countermeasure": "ausência de substrato"
+    },
+    {
+      "id": "RV7-MAT-04",
+      "name": "Vórtice de Fragmentos",
+      "effect": "dano",
+      "grade": 3,
+      "modifiers": {
+        "area": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 12,
+      "description": "zona de estilhaços dano 6 e dispersão",
+      "countermeasure": "dispersar alvos e cobertura"
+    },
+    {
+      "id": "RV7-MAT-05",
+      "name": "Barreira Recomposta",
+      "effect": "criacao",
+      "grade": 3,
+      "modifiers": {
+        "reacao": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "escudo recomposto RD3/Integridade6",
+      "countermeasure": "ataque continuado"
+    },
+    {
+      "id": "RV7-MAT-06",
+      "name": "Traço Mineral",
+      "effect": "sensoriamento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "análise tátil de minerais",
+      "countermeasure": "liga desconhecida"
+    },
+    {
+      "id": "RV7-SYN-01",
+      "name": "Sussurro de Ritmo",
+      "effect": "influencia",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 9,
+      "description": "induz sensação rítmica com resistência",
+      "countermeasure": "blindagem mental"
+    },
+    {
+      "id": "RV7-SYN-02",
+      "name": "Janela Empática",
+      "effect": "sensoriamento",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 3,
+      "description": "percebe variações emocionais sem leitura absoluta",
+      "countermeasure": "ruído emocional"
+    },
+    {
+      "id": "RV7-SYN-03",
+      "name": "Deflexão de Reflexo",
+      "effect": "movimento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "reflexos treinados permitem reposicionamento",
+      "countermeasure": "emboscada"
+    },
+    {
+      "id": "RV7-SYN-04",
+      "name": "Marca de Memória",
+      "effect": "sensoriamento",
+      "grade": 2,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 2,
+      "description": "reconhece assinatura recente de memória",
+      "countermeasure": "informação inacessível"
+    },
+    {
+      "id": "RV7-SYN-05",
+      "name": "Filtro de Atenção",
+      "effect": "ocultacao",
+      "grade": 3,
+      "modifiers": {},
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 6,
+      "description": "suprime sinais de atenção detectáveis",
+      "countermeasure": "observação multissensorial"
+    },
+    {
+      "id": "RV7-SYN-06",
+      "name": "Pulso de Interdição",
+      "effect": "neutralizacao",
+      "grade": 3,
+      "modifiers": {
+        "distancia": true
+      },
+      "limitation": false,
+      "sourceVersion": "0.7",
+      "referenceCost": 12,
+      "description": "interfere em uma manifestação mental identificada",
+      "countermeasure": "resistir e trocar fonte"
+    }
+  ]
+}

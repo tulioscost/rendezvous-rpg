@@ -1,0 +1,17 @@
+<section class="rdv-item-card"><header><span>RENDEZVOUS</span><h2>{{item.name}}</h2></header>
+  <label>Nome<input name="name" value="{{item.name}}" /></label>
+  {{#if isPower}}
+  <div class="rdv-two"><label>Efeito<select name="system.effect">{{#each effects}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></label><label>Graduação G<input type="number" min="1" max="6" name="system.grade" value="{{system.grade}}" /></label></div>
+  <div class="rdv-pp-badge">CUSTO ATUAL: {{calculated.cost}} PP {{#if calculated.alternate}}(modo alternativo){{/if}}</div>
+  {{#each calculated.warnings}}<p class="rdv-warning-text">⚠ {{this}}</p>{{/each}}
+  <label>Matriz de poder (mesmo identificador do modo principal)<input name="system.matrix" value="{{system.matrix}}" /></label>
+  <label>Fonte<input name="system.source" value="{{system.source}}" /></label>
+  <label>Descrição<textarea name="system.description" rows="3">{{system.description}}</textarea></label>
+  <div class="rdv-item-mods"><strong>AMPLIAÇÕES</strong>{{#each modifiers}}<label><input type="checkbox" name="system.modifiers.{{id}}" {{#if checked}}checked{{/if}} />{{label}}</label>{{/each}}</div>
+  <div class="rdv-item-mods"><strong>CUSTOS ESPECIAIS</strong><label><input type="checkbox" name="system.limitation" {{#if system.limitation}}checked{{/if}} /> Limitação relevante (−1 PP/G)</label><label><input type="checkbox" name="system.alternate" {{#if system.alternate}}checked{{/if}} /> Modalidade alternativa (ver matriz)</label></div>
+  <p class="rdv-subcaption">Alternativos só podem pertencer à mesma fonte e não exceder o custo integral do modo principal; ver Livro Básico.</p>
+  <label>Ativação<input name="system.activation" value="{{system.activation}}" /></label><div class="rdv-two"><label>Alcance<input name="system.range" value="{{system.range}}" /></label><label>Duração<input name="system.duration" value="{{system.duration}}" /></label></div>
+  <label>Resistência<input name="system.resistance" value="{{system.resistance}}" /></label><label>Contramedidas<textarea name="system.countermeasure" rows="2">{{system.countermeasure}}</textarea></label>
+  {{else}}<label>Descrição<textarea name="system.description" rows="4">{{system.description}}</textarea></label><div class="rdv-two"><label>Carga<input type="number" name="system.weight" value="{{system.weight}}" /></label><label>Bônus<input type="number" name="system.bonus" value="{{system.bonus}}" /></label></div><label>Durabilidade<input type="number" name="system.durability" value="{{system.durability}}" /></label>{{/if}}
+  <footer>ALTERAÇÕES SALVAS NO DOCUMENTO AO EDITAR OS CAMPOS</footer>
+</section>

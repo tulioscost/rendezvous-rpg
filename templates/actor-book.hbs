@@ -1,0 +1,88 @@
+<div class="rdv-book" tabindex="0" aria-label="Ficha RENDEZVOUS, páginas de quadrinhos">
+  <header class="rdv-topline">
+    <div class="rdv-logo">RENDEZVOUS <small>O MUNDO DEPOIS DA LUZ</small></div>
+    <div class="rdv-page-counter" data-current-page>01 / 05</div>
+  </header>
+  <main class="rdv-pages">
+    <section class="rdv-comic-page rdv-identity" data-rdv-page="0" aria-label="Identidade">
+      <header class="rdv-splash"><span class="rdv-chapter-no">01</span><div><span class="rdv-kicker">FICHA DE ALTERADO</span><h2>IDENTIDADE <em>HEROICA</em></h2></div></header>
+      <div class="rdv-layout rdv-identity-layout">
+        <div class="rdv-panel rdv-portrait-panel">
+          <div class="rdv-panel-heading">O SEU HERÓI</div>
+          <img class="rdv-portrait" src="{{img}}" alt="Retrato do personagem" data-rdv-image-picker title="Clique para trocar a imagem" />
+          <button type="button" class="rdv-image-swap" data-rdv-image-picker>TROCAR IMAGEM</button>
+          <div class="rdv-bubble">O impossível aconteceu. E agora?</div>
+        </div>
+        <div class="rdv-panel rdv-white rdv-bio-panel">
+          <div class="rdv-panel-heading">NOME E ORIGEM</div>
+          <label>Codinome<input name="system.identity.codename" value="{{system.identity.codename}}" {{#unless editable}}disabled{{/unless}}></label>
+          <label>Nome civil<input name="system.identity.civil" value="{{system.identity.civil}}" {{#unless editable}}disabled{{/unless}}></label>
+          <div class="rdv-two"><label>Idade<input name="system.identity.age" value="{{system.identity.age}}" {{#unless editable}}disabled{{/unless}}></label><label>Pronomes<input name="system.identity.pronouns" value="{{system.identity.pronouns}}" {{#unless editable}}disabled{{/unless}}></label></div>
+          <label>Ocupação<input name="system.identity.occupation" value="{{system.identity.occupation}}" {{#unless editable}}disabled{{/unless}}></label>
+          <label>Afiliação<input name="system.identity.affiliation" value="{{system.identity.affiliation}}" {{#unless editable}}disabled{{/unless}}></label>
+          <label>Fonte da manifestação<select name="system.identity.origin" {{#unless editable}}disabled{{/unless}}><option {{#if (eq system.identity.origin 'Alteração Solis')}}selected{{/if}}>Alteração Solis</option><option {{#if (eq system.identity.origin 'Tecnologia Solis')}}selected{{/if}}>Tecnologia Solis</option><option {{#if (eq system.identity.origin 'Disciplina extraordinária')}}selected{{/if}}>Disciplina extraordinária</option><option {{#if (eq system.identity.origin 'Híbrida')}}selected{{/if}}>Híbrida</option></select></label>
+          <label>Conceito<textarea name="system.identity.concept" rows="2" {{#unless editable}}disabled{{/unless}}>{{system.identity.concept}}</textarea></label>
+        </div>
+        <div class="rdv-panel rdv-blue rdv-tier-panel"><div class="rdv-panel-heading">PATAMAR DE CAMPANHA</div>
+          <select name="system.tier" {{#unless editable}}disabled{{/unless}}>{{#each tiers}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+          <div class="rdv-numeric-hero"><strong>{{calculated.tier.pp}}</strong><span>PP disponíveis</span></div><div class="rdv-tagline">Graduação máxima: G{{calculated.tier.rank}}</div>
+        </div>
+        <div class="rdv-panel rdv-red rdv-quick-panel"><div class="rdv-panel-heading">EM NÚMEROS</div>
+          <div class="rdv-quick"><div><b>{{calculated.pvMax}}</b><small>PV MÁXIMOS</small></div><div><b>{{system.resources.rd}}</b><small>RD</small></div><div><b>{{calculated.ppRemaining}}</b><small>PP LIVRES</small></div><div><b>{{system.resources.viradas}}</b><small>VIRADAS</small></div></div>
+        </div>
+        <div class="rdv-panel rdv-yellow rdv-story-panel"><div class="rdv-panel-heading">UMA PROMESSA</div><label>Responsabilidade<textarea rows="3" name="system.narrative.responsibility" {{#unless editable}}disabled{{/unless}}>{{system.narrative.responsibility}}</textarea></label></div>
+      </div>
+    </section>
+    <section class="rdv-comic-page rdv-abilities" data-rdv-page="1" aria-label="Atributos e perícias">
+      <header class="rdv-splash"><span class="rdv-chapter-no">02</span><div><span class="rdv-kicker">OS LIMITES QUEBRARAM</span><h2>ATRIBUTOS <em>& PERÍCIAS</em></h2></div></header>
+      <div class="rdv-panel rdv-white"><div class="rdv-panel-heading">NOVE ATRIBUTOS • ROLAGENS EM d6</div><div class="rdv-attribute-grid">
+        {{#each attributes}}<div class="rdv-attribute"><button type="button" class="rdv-roll" data-roll-attr="{{id}}" title="Rolar {{label}}">✦</button><label><span>{{label}}</span><input type="number" min="1" max="6" name="system.attributes.{{id}}" value="{{value}}" /></label><strong>{{id}}</strong></div>{{/each}}
+      </div><div class="rdv-subcaption">Atributo inicial: 1 • distribua 9 pontos adicionais • teto inicial 4.</div></div>
+      <div class="rdv-panel rdv-white"><div class="rdv-panel-heading">27 PERÍCIAS • CADA GRADUAÇÃO = +1d6</div><div class="rdv-skill-grid">
+        {{#each skills}}<div class="rdv-skill"><button type="button" class="rdv-roll" data-roll-skill="{{id}}" data-roll-with="{{attribute}}" title="Rolar {{label}}">⚄</button><span class="rdv-skill-title">{{label}} <small>{{attribute}}</small></span><input type="number" min="0" max="4" value="{{value}}" name="system.skills.{{id}}" /></div>{{/each}}
+      </div><div class="rdv-subcaption">15 pontos de perícia no início • máximo inicial 3 por perícia. <b>5–6</b> = sucesso; 6 também gera Ímpeto em teste vencido.</div></div>
+      <div class="rdv-panel rdv-blue rdv-spending"><span>ATRIBUTOS: <b>{{calculated.attrSpent}} / 9</b></span><span>PERÍCIAS: <b>{{calculated.skillSpent}} / 15</b></span></div>
+    </section>
+    <section class="rdv-comic-page rdv-powers" data-rdv-page="2" aria-label="Poderes e técnicas">
+      <header class="rdv-splash"><span class="rdv-chapter-no">03</span><div><span class="rdv-kicker">A ONDA DEIXOU UMA MARCA</span><h2>PODERES <em>& TÉCNICAS</em></h2></div></header>
+      <div class="rdv-panel rdv-white"><div class="rdv-panel-heading">ENGENHARIA DE PODERES • 14 EFEITOS</div>
+        <div class="rdv-power-stats"><div><strong>{{calculated.ppSpent}} / {{calculated.tier.pp}}</strong><span>PP utilizados</span></div><div><strong>{{calculated.ppRemaining}}</strong><span>PP restantes</span></div><div><strong>G{{calculated.tier.rank}}</strong><span>Teto do patamar</span></div></div>
+        {{#if calculated.warnings}}<div class="rdv-warnings">{{#each calculated.warnings}}<p>⚠ {{this}}</p>{{/each}}</div>{{/if}}
+        <div class="rdv-power-list">{{#each powers}}<article class="rdv-power-card"><div class="rdv-power-symbol">✦</div><div class="rdv-power-desc"><h3>{{name}} <small>G{{system.grade}} • {{system.effect}}</small></h3><p>{{system.description}}</p>{{#if costWarnings}}<small class="rdv-warning-text">{{costWarnings}}</small>{{/if}}</div><div class="rdv-power-actions"><b>{{displayCost}} PP</b><button type="button" data-power-roll="{{id}}">ROLAR</button><button type="button" data-item-edit="{{id}}">EDITAR</button><button type="button" data-item-delete="{{id}}">✕</button></div></article>{{else}}<div class="rdv-empty">Ainda não há técnicas. Clique em “Criar técnica” para começar.</div>{{/each}}</div>
+        {{#if editable}}<button type="button" class="rdv-cta" data-create-type="power">+ CRIAR TÉCNICA</button><div class="rdv-catalog-import"><label>Biblioteca de 140 técnicas<select data-catalog-select>{{#each catalog}}<option value="{{id}}">{{label}}</option>{{/each}}</select></label><button type="button" data-import-power>IMPORTAR DO CATÁLOGO</button></div>{{/if}}
+      </div>
+      <div class="rdv-panel rdv-blue rdv-rule-note"><strong>REGRA DO NÚCLEO:</strong> efeitos diferentes podem ter a mesma fonte, mas cada vantagem mecânica precisa ser adquirida. Modalidades alternativas não funcionam simultaneamente.</div>
+    </section>
+    <section class="rdv-comic-page rdv-combat" data-rdv-page="3" aria-label="Combate e recursos">
+      <header class="rdv-splash"><span class="rdv-chapter-no">04</span><div><span class="rdv-kicker">QUANDO O IMPOSSÍVEL ATACA</span><h2>COMBATE <em>& RECURSOS</em></h2></div></header>
+      <div class="rdv-layout rdv-combat-layout"><div class="rdv-panel rdv-red"><div class="rdv-panel-heading">VIDA & DEFESA</div>
+        <div class="rdv-two"><label>PV atuais<input type="number" name="system.resources.pv" min="0" max="{{calculated.pvMax}}" value="{{system.resources.pv}}" /></label><div class="rdv-big-stat"><strong>{{calculated.pvMax}}</strong><span>PV máximos</span></div></div>
+        <div class="rdv-two"><label>Redução de dano<input type="number" min="0" name="system.resources.rd" value="{{system.resources.rd}}" /></label><label>Guarda D<input type="number" min="1" max="5" name="system.combat.guard" value="{{system.combat.guard}}" /></label></div>
+        <div class="rdv-subcaption">PV máximo = ROB × 5 • RD não cumulativa • Guarda padrão D2.</div></div>
+        <div class="rdv-panel rdv-blue"><div class="rdv-panel-heading">VIRADAS E TENSÃO</div>
+          <div class="rdv-two"><label>Viradas (0–3)<input type="number" min="0" max="3" name="system.resources.viradas" value="{{system.resources.viradas}}" /></label><label>Tensão (0–6)<input type="number" min="0" max="6" name="system.resources.tensao" value="{{system.resources.tensao}}" /></label></div>
+          <label>Marcos<input type="number" min="0" name="system.resources.marcos" value="{{system.resources.marcos}}" /></label>
+          <label class="rdv-checkbox"><input type="checkbox" name="system.resources.reactionUsed" {{#if system.resources.reactionUsed}}checked{{/if}} /> Reação utilizada nesta rodada</label><button type="button" data-reset-reaction>RECUPERAR REAÇÃO</button>
+        </div>
+        <div class="rdv-panel rdv-white rdv-conditions"><div class="rdv-panel-heading">CONDIÇÕES</div>{{#each conditions}}<label class="rdv-checkbox"><input type="checkbox" name="system.conditions.{{id}}" {{#if checked}}checked{{/if}} /> {{label}}</label>{{/each}}</div>
+        <div class="rdv-panel rdv-yellow"><div class="rdv-panel-heading">TALENTOS</div><label>Primeiro talento<input name="system.talents.first" value="{{system.talents.first}}" /></label><label>Segundo talento<input name="system.talents.second" value="{{system.talents.second}}" /></label></div>
+        <div class="rdv-panel rdv-white rdv-equipment"><div class="rdv-panel-heading">EQUIPAMENTOS</div>{{#each equipment}}<div class="rdv-item-row"><span>{{name}}</span><button type="button" data-item-edit="{{id}}">EDITAR</button><button type="button" data-item-delete="{{id}}">✕</button></div>{{else}}<p class="rdv-subcaption">Nenhum equipamento registrado.</p>{{/each}}{{#if editable}}<button type="button" class="rdv-cta" data-create-type="equipment">+ NOVO EQUIPAMENTO</button>{{/if}}</div>
+        <div class="rdv-panel rdv-white"><div class="rdv-panel-heading">ANOTAÇÕES DE CONFRONTO</div><textarea name="system.combat.notes" rows="6">{{system.combat.notes}}</textarea></div>
+      </div>
+    </section>
+    <section class="rdv-comic-page rdv-dossier" data-rdv-page="4" aria-label="Dossiê Solis e narrativa">
+      <header class="rdv-splash"><span class="rdv-chapter-no">05</span><div><span class="rdv-kicker">UMA FONTE, INÚMEROS CAMINHOS</span><h2>DOSSIÊ <em>DA RESSONÂNCIA</em></h2></div></header>
+      <div class="rdv-layout rdv-dossier-layout"><div class="rdv-panel rdv-white"><div class="rdv-panel-heading">MAPA DE RESSONÂNCIA APLICADA</div>
+        <label>Núcleo Gerador<input name="system.resonance.nucleus" value="{{system.resonance.nucleus}}" /></label><label>Expressão<input name="system.resonance.expression" value="{{system.resonance.expression}}" /></label>
+        <label>Substrato<input name="system.resonance.substrate" value="{{system.resonance.substrate}}" /></label><label>Operação<input name="system.resonance.operation" value="{{system.resonance.operation}}" /></label>
+        <label>Gatilho<input name="system.resonance.trigger" value="{{system.resonance.trigger}}" /></label><label>Limite<input name="system.resonance.limit" value="{{system.resonance.limit}}" /></label>
+        <label>Repertório<input name="system.resonance.repertoire" value="{{system.resonance.repertoire}}" /></label><label>Assinatura Solis<input name="system.resonance.signature" value="{{system.resonance.signature}}" /></label>
+        <label>Contramedidas<textarea rows="3" name="system.resonance.countermeasures">{{system.resonance.countermeasures}}</textarea></label>
+      </div><div class="rdv-panel rdv-blue"><div class="rdv-panel-heading">A PESSOA POR TRÁS DA MÁSCARA</div><label>História<textarea rows="5" name="system.narrative.history">{{system.narrative.history}}</textarea></label><label>Aparência<textarea rows="3" name="system.narrative.appearance">{{system.narrative.appearance}}</textarea></label></div>
+      <div class="rdv-panel rdv-yellow"><div class="rdv-panel-heading">RELAÇÕES E CONSEQUÊNCIAS</div><label>Vínculo<input name="system.narrative.bond" value="{{system.narrative.bond}}" /></label><label>Vulnerabilidade<input name="system.narrative.vulnerability" value="{{system.narrative.vulnerability}}" /></label><label>Aliados<textarea rows="2" name="system.narrative.allies">{{system.narrative.allies}}</textarea></label><label>Inimigos<textarea rows="2" name="system.narrative.enemies">{{system.narrative.enemies}}</textarea></label><label>Objetivos<textarea rows="2" name="system.narrative.objectives">{{system.narrative.objectives}}</textarea></label></div>
+      </div>
+    </section>
+  </main>
+  <footer class="rdv-turnbar"><button type="button" class="rdv-turn" data-page-prev aria-label="Página anterior">◀ ANTERIOR</button><nav class="rdv-index" aria-label="Páginas da ficha">{{#each pageNames}}<button type="button" data-page-go="{{@index}}" title="{{this}}" aria-label="Ir para {{this}}">{{inc @index}}</button>{{/each}}</nav><button type="button" class="rdv-turn" data-page-next aria-label="Próxima página">PRÓXIMA ▶</button></footer>
+  <div class="rdv-bottom-tip">Cada seção é uma página de quadrinhos. Clique nas setas ou use ← → fora dos campos de texto.</div>
+</div>
