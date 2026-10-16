@@ -1,0 +1,153 @@
+{
+  "Actor": {
+    "types": [
+      "hero",
+      "npc"
+    ],
+    "templates": {
+      "core": {
+        "identity": {
+          "codename": "",
+          "civil": "",
+          "age": "",
+          "pronouns": "",
+          "occupation": "",
+          "affiliation": "",
+          "origin": "Alteração Solis",
+          "concept": ""
+        },
+        "tier": "heroica",
+        "attributes": {
+          "FOR": 1,
+          "AGI": 1,
+          "ROB": 1,
+          "CAR": 1,
+          "MOR": 1,
+          "FIB": 1,
+          "INT": 1,
+          "RAC": 1,
+          "VON": 1
+        },
+        "skills": {
+          "luta": 0,
+          "atletismo": 0,
+          "contencao": 0,
+          "pontaria": 0,
+          "acrobacia": 0,
+          "furtividade": 0,
+          "resistencia": 0,
+          "folego": 0,
+          "sobrevivencia": 0,
+          "persuasao": 0,
+          "enganacao": 0,
+          "inspiracao": 0,
+          "coragem": 0,
+          "lideranca": 0,
+          "integridade": 0,
+          "autocontrole": 0,
+          "disciplina": 0,
+          "persistencia": 0,
+          "ciencia": 0,
+          "engenharia": 0,
+          "medicina": 0,
+          "investigacao": 0,
+          "percepcao": 0,
+          "estrategia": 0,
+          "canalizacao": 0,
+          "tenacidade": 0,
+          "sensibilidade": 0
+        },
+        "resources": {
+          "pv": 5,
+          "rd": 0,
+          "viradas": 2,
+          "tensao": 0,
+          "marcos": 0,
+          "reactionUsed": false
+        },
+        "combat": {
+          "guard": 2,
+          "notes": ""
+        },
+        "talents": {
+          "first": "",
+          "second": ""
+        },
+        "resonance": {
+          "nucleus": "",
+          "expression": "",
+          "substrate": "",
+          "operation": "",
+          "trigger": "",
+          "limit": "",
+          "repertoire": "",
+          "signature": "",
+          "countermeasures": ""
+        },
+        "narrative": {
+          "responsibility": "",
+          "vulnerability": "",
+          "bond": "",
+          "history": "",
+          "appearance": "",
+          "allies": "",
+          "enemies": "",
+          "objectives": ""
+        },
+        "conditions": {
+          "ferido": false,
+          "contido": false,
+          "desorientado": false,
+          "vulneravel": false,
+          "incapacitado": false,
+          "interferencia": false
+        }
+      }
+    },
+    "hero": {
+      "templates": [
+        "core"
+      ]
+    },
+    "npc": {
+      "templates": [
+        "core"
+      ]
+    }
+  },
+  "Item": {
+    "types": [
+      "power",
+      "equipment"
+    ],
+    "power": {
+      "effect": "dano",
+      "grade": 1,
+      "modifiers": {
+        "distancia": false,
+        "area": false,
+        "seletivo": false,
+        "sustentado": false,
+        "reacao": false,
+        "perfurante": false
+      },
+      "limitation": false,
+      "alternate": false,
+      "source": "Alteração Solis",
+      "description": "",
+      "activation": "Ação principal",
+      "range": "Contato",
+      "duration": "Instantânea",
+      "resistance": "",
+      "countermeasure": "",
+      "fixedCost": 0,
+      "matrix": ""
+    },
+    "equipment": {
+      "description": "",
+      "weight": 0,
+      "bonus": 0,
+      "durability": 100
+    }
+  }
+}

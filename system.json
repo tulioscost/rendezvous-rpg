@@ -1,0 +1,47 @@
+{
+  "id": "rendezvous-rpg",
+  "title": "RENDEZVOUS — RPG de Super-Heróis",
+  "description": "Sistema de RPG RENDEZVOUS com ficha em páginas de quadrinhos e passagem de páginas (Alfa 0.7).",
+  "version": "0.8.1",
+  "authors": [
+    {
+      "name": "RENDEZVOUS RPG"
+    }
+  ],
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13
+  },
+  "esmodules": [
+    "module/main.mjs"
+  ],
+  "styles": [
+    "styles/comic-sheet.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "hero": {},
+      "npc": {}
+    },
+    "Item": {
+      "power": {},
+      "equipment": {}
+    }
+  },
+  "primaryTokenAttribute": "resources.pv",
+  "grid": {
+    "distance": 10,
+    "units": "m"
+  },
+  "initiative": "1d6",
+  "url": "https://github.com/tulioscost/rendezvous-rpg",
+  "manifest": "https://raw.githubusercontent.com/tulioscost/rendezvous-rpg/main/system.json",
+  "download": "https://github.com/tulioscost/rendezvous-rpg/releases/latest/download/rendezvous-rpg.zip"
+}
