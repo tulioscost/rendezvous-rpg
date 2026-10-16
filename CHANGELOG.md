@@ -18,3 +18,10 @@
 - Rotina de testes, empacotamento e preparação de release.
 
 **Limitação:** funcionalidades não executadas dentro do aplicativo Foundry neste ambiente; validação visual e testes humanos ainda pendentes.
+
+## v0.8.2 — Ficha e compêndios
+- Registro explícito das fichas de Herói e NPC no DocumentSheetConfig do Foundry V13.
+- Tradução das categorias de documentos, retirando nomes técnicos como TYPES.Actor.hero.
+- Uso do seletor nativo de imagem da ficha e preservação do layout paginado.
+- Livro de Regras (12 entradas), Heróis Prontos (10) e Poderes (140): fontes JSON versionadas.
+- Instalação alternativa de compêndios do mundo por Narrador e compilação LevelDB no workflow da release.
