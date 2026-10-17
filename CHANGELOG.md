@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.8.5
+- Foundry V14.369: TypeDataModel e atualização de APIs.
+- Cena de boas-vindas com arte 16:9, criação automática idempotente.
+- Nova macro de antagonistas de seis arquétipos.
+- Macros auto instaladas para o Narrador.
+- Mantido Dice So Nice! obrigatório.
+
+## v0.8.4 — Dice So Nice! e gerador de heróis
+
+- Dependência obrigatória Dice So Nice!, três d6 3D e faces 1/6 especiais.
+- Macro de geração automática, instalação idempotente, validação de PP.
+
+# RENDEZVOUS — Histórico de versões
+
+## 0.8.3 — Dados da Onda Solis
+- Três coleções estilizadas de d6: Solis Dourado, Vigília Ciano e Ruptura Rubra.
+- Cada face tem SVG editável e interpretação mecânica idêntica.
+- Resultados de rolagem ilustrados no chat do Foundry sem módulos adicionais.
+- Seleção de aparência na página Combate da ficha.
+- Laboratório interativo no navegador (`docs/dados.html`).
+- Textura de papel-jornal e retículas, sem alteração de probabilidades.
+
+# Changelog
+
 ## 0.8.1
 - Adicionada troca de imagem do herói na ficha do Foundry e na demo web.
 - Aplicada textura de papel-jornal às páginas e painéis da ficha.

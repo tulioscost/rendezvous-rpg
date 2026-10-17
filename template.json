@@ -63,7 +63,8 @@
           "viradas": 2,
           "tensao": 0,
           "marcos": 0,
-          "reactionUsed": false
+          "reactionUsed": false,
+          "diceTheme": "solis"
         },
         "combat": {
           "guard": 2,

@@ -1,22 +1,23 @@
 {
   "id": "rendezvous-rpg",
   "title": "RENDEZVOUS — RPG de Super-Heróis",
-  "description": "RENDEZVOUS — ficha em quadrinhos para Foundry V13, 5 páginas viráveis, retrato editável e três compêndios.",
-  "version": "0.8.2",
+  "description": "RENDEZVOUS V14.369: ficha de gibi, modelos de dados V14, boas-vindas automáticas, geradores de heróis e vilões, Dice So Nice! obrigatório.",
+  "version": "0.8.5",
   "authors": [
     {
       "name": "RENDEZVOUS RPG"
     }
   ],
   "compatibility": {
-    "minimum": 13,
-    "verified": 13
+    "minimum": "14.369",
+    "verified": "14.369"
   },
   "esmodules": [
     "module/main.mjs"
   ],
   "styles": [
-    "styles/comic-sheet.css"
+    "styles/comic-sheet.css",
+    "styles/dice.css"
   ],
   "languages": [
     {
@@ -83,5 +84,14 @@
         "ASSISTANT": "OWNER"
       }
     }
-  ]
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "dice-so-nice",
+        "type": "module"
+      }
+    ]
+  },
+  "background": "systems/rendezvous-rpg/assets/scenes/boas-vindas-solis.webp"
 }
