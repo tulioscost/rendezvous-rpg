@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.6 — Corrigido para Foundry V14.369
+- Corrigidos os geradores de heróis e vilões para o modelo completo de Actor/Item.
+- Normalizados compêndios: heróis prontos e 140 poderes.
+- Corrigido o seletor de imagem do herói, eliminando acionamentos duplicados.
+- Adicionado áudio de virada de página (`assets/sfx/page-turn.wav`).
+- Criados testes de regressão para validação V14 e seletor de imagens.
+
 ## 0.8.5
 - Foundry V14.369: TypeDataModel e atualização de APIs.
 - Cena de boas-vindas com arte 16:9, criação automática idempotente.

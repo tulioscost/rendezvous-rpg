@@ -1,8 +1,8 @@
 {
   "id": "rendezvous-rpg",
   "title": "RENDEZVOUS — RPG de Super-Heróis",
-  "description": "RENDEZVOUS V14.369: ficha de gibi, modelos de dados V14, boas-vindas automáticas, geradores de heróis e vilões, Dice So Nice! obrigatório.",
-  "version": "0.8.5",
+  "description": "RENDEZVOUS V14.369: geradores com validação completa, seletor de retratos corrigido, som de virada e Dice So Nice! obrigatório.",
+  "version": "0.8.6",
   "authors": [
     {
       "name": "RENDEZVOUS RPG"
